@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MyFarmIago.Models.Registro>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Animal.Numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Animal.Observacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.Nome)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Animal.Numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Animal.Observacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.Nome)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.RegistroID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.RegistroID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.RegistroID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,58 @@
+﻿@model MyFarmIago.Models.Ave
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ave</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SexoAve)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SexoAve)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EhCaipira)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EhCaipira)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AnimalID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
